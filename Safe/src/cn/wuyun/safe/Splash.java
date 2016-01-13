@@ -35,19 +35,19 @@ public class Splash extends Activity {
 
 	private void update() {
 		// TODO Auto-generated method stub
-		HttpUtils http = new HttpUtils(3000);
-		http.send(HttpMethod.GET, "xxx", new RequestCallBack<String>() {
+		HttpUtils httpUtils = new HttpUtils(3000);
+		httpUtils.send(HttpMethod.GET, "http://192.168.3.115:8080", new RequestCallBack<String>() {
 
 			@Override
 			public void onFailure(HttpException arg0, String arg1) {
 				// TODO Auto-generated method stub
-
+					System.out.println("链接成功");
 			}
 
 			@Override
 			public void onSuccess(ResponseInfo<String> arg0) {
 				// TODO Auto-generated method stub
-
+				System.out.println("链接失败");
 			}
 		});
 	}
