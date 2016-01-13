@@ -26,7 +26,7 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f080001;
-        public static final int btn=0x7f080000;
+        public static final int tv_splash_version=0x7f080000;
     }
     public static final class layout {
         public static final int activity_splash=0x7f030000;
@@ -63,7 +63,6 @@ public final class R {
          */
         public static final int AppBaseTheme=0x7f060000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
     }
