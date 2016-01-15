@@ -60,7 +60,7 @@ public class Splash extends Activity {
 				upDate();
 			}
 		}, 3000);
-		upDate();
+		
 	}
 
 	private void upDate() {
@@ -213,6 +213,7 @@ public class Splash extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
+		
 		super.onActivityResult(requestCode, resultCode, data);
 		skipMain();
 	}
