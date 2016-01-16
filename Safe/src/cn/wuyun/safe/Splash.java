@@ -11,7 +11,7 @@ import com.lidroid.xutils.http.ResponseInfo;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
 
-import cn.wuyun.Utils.PageVersionUtils;
+import cn.wuyun.safe.Utils.PageVersionUtils;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -32,7 +32,7 @@ import android.widget.Toast;
 public class Splash extends Activity {
 
 	private String UPDATEURL = "http://192.168.3.115:8080/update.html";
-	private static final int INSTALLREQUESTCODE=100; 
+	private static final int INSTALLREQUESTCODE = 100;
 	private TextView tv_splash_version;
 	private int code;
 	private String apkurl;
@@ -48,21 +48,26 @@ public class Splash extends Activity {
 		initView();
 	}
 
-	// ���ð汾
+	/**
+	 * 初始化控件
+	 */
 	private void initView() {
 		tv_splash_version = (TextView) findViewById(R.id.tv_splash_version);
 		tv_splash_version.setText("版本:" + PageVersionUtils.VersionCode(this));
 		new Handler().postDelayed(new Runnable() {
-			
+
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
 				upDate();
 			}
 		}, 3000);
-		
+
 	}
 
+	/**
+	 * 链接服务器
+	 */
 	private void upDate() {
 		http = new HttpUtils(3000);
 
@@ -85,6 +90,11 @@ public class Splash extends Activity {
 		});
 	}
 
+	/**
+	 * 解析服务器端的json对象
+	 * 
+	 * @param json
+	 */
 	protected void prossejson(String json) {
 		// TODO Auto-generated method stub
 		try {
@@ -105,6 +115,9 @@ public class Splash extends Activity {
 		}
 	}
 
+	/**
+	 * 现式意图跳转
+	 */
 	private void skipMain() {
 		// TODO Auto-generated method stub
 		Intent intent = new Intent(this, MainActivity.class);
@@ -112,6 +125,9 @@ public class Splash extends Activity {
 		finish();
 	}
 
+	/**
+	 * 设置对话框
+	 */
 	private void Alertbiglog() {
 		// TODO Auto-generated method stub
 		AlertDialog.Builder alert = new Builder(Splash.this);
@@ -148,6 +164,9 @@ public class Splash extends Activity {
 		alert.show();
 	}
 
+	/**
+	 * 通过链接服务器下载新版本
+	 */
 	protected void updateDownload() {
 		// TODO Auto-generated method stub
 		if (Environment.getExternalStorageState().equals(
@@ -192,6 +211,9 @@ public class Splash extends Activity {
 
 	}
 
+	/**
+	 * 安装下载的心APK
+	 */
 	protected void installAPK() {
 		// TODO Auto-generated method stub
 		/**
@@ -213,7 +235,7 @@ public class Splash extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
-		
+
 		super.onActivityResult(requestCode, resultCode, data);
 		skipMain();
 	}

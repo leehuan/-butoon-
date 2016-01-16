@@ -9,6 +9,34 @@ package cn.wuyun.safe;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int istoggle=0x7f010002;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>first</code></td><td>0</td><td></td></tr>
+<tr><td><code>middle</code></td><td>1</td><td></td></tr>
+<tr><td><code>last</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int settingBackground=0x7f010001;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int title=0x7f010000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -17,46 +45,82 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int blue_bkg=0x7f020000;
-        public static final int heima=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int setting=0x7f020003;
-        public static final int splash=0x7f020004;
+        public static final int antispam_report_button=0x7f020000;
+        public static final int antispam_report_button_press=0x7f020001;
+        public static final int blue_bkg=0x7f020002;
+        public static final int first_normal=0x7f020003;
+        public static final int first_pressed=0x7f020004;
+        public static final int hcql=0x7f020005;
+        public static final int heima=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int jcgl=0x7f020008;
+        public static final int last_normal=0x7f020009;
+        public static final int last_pressed=0x7f02000a;
+        public static final int lltj=0x7f02000b;
+        public static final int middle_normal=0x7f02000c;
+        public static final int middle_pressed=0x7f02000d;
+        public static final int off=0x7f02000e;
+        public static final int on=0x7f02000f;
+        public static final int rjgj=0x7f020010;
+        public static final int selector_home_griview_bg=0x7f020011;
+        public static final int selector_settingvire_first=0x7f020012;
+        public static final int selector_settingvire_last=0x7f020013;
+        public static final int selector_settingvire_middle=0x7f020014;
+        public static final int setting=0x7f020015;
+        public static final int sjfd=0x7f020016;
+        public static final int sjsd=0x7f020017;
+        public static final int splash=0x7f020018;
+        public static final int srlj=0x7f020019;
+        public static final int szzx=0x7f02001a;
     }
     public static final class id {
-        public static final int action_settings=0x7f080006;
-        public static final int home_gv=0x7f080004;
-        public static final int home_iv_log=0x7f080000;
-        public static final int home_iv_setting=0x7f080001;
-        public static final int home_tv_msg=0x7f080003;
-        public static final int home_tv_title=0x7f080002;
-        public static final int tv_splash_version=0x7f080005;
+        public static final int action_settings=0x7f04000f;
+        public static final int first=0x7f040000;
+        public static final int home_gv=0x7f04000a;
+        public static final int home_iv_log=0x7f040006;
+        public static final int home_iv_setting=0x7f040007;
+        public static final int home_msg_context=0x7f040005;
+        public static final int home_msg_log=0x7f040003;
+        public static final int home_msg_title=0x7f040004;
+        public static final int home_tv_msg=0x7f040009;
+        public static final int home_tv_title=0x7f040008;
+        public static final int im_setting_toggle=0x7f04000d;
+        public static final int last=0x7f040002;
+        public static final int middle=0x7f040001;
+        public static final int sv_setting_update=0x7f04000b;
+        public static final int tv_setting_title=0x7f04000c;
+        public static final int tv_splash_version=0x7f04000e;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int activity_splash=0x7f030001;
+        public static final int activity_gridview=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int activity_setting=0x7f030002;
+        public static final int activity_settingview=0x7f030003;
+        public static final int activity_splash=0x7f030004;
     }
     public static final class menu {
-        public static final int splash=0x7f070000;
+        public static final int splash=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
+        public static final int action_settings=0x7f060001;
+        public static final int app_name=0x7f060000;
+        public static final int hello_world=0x7f060002;
     }
     public static final class style {
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -70,9 +134,75 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
+        public static final int activityTitleBar=0x7f070002;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a StringView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #StringView_istoggle cn.wuyun.safe:istoggle}</code></td><td></td></tr>
+           <tr><td><code>{@link #StringView_settingBackground cn.wuyun.safe:settingBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #StringView_title cn.wuyun.safe:title}</code></td><td></td></tr>
+           </table>
+           @see #StringView_istoggle
+           @see #StringView_settingBackground
+           @see #StringView_title
+         */
+        public static final int[] StringView = {
+            0x7f010000, 0x7f010001, 0x7f010002
+        };
+        /**
+          <p>This symbol is the offset where the {@link cn.wuyun.safe.R.attr#istoggle}
+          attribute's value can be found in the {@link #StringView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:istoggle
+        */
+        public static final int StringView_istoggle = 2;
+        /**
+          <p>This symbol is the offset where the {@link cn.wuyun.safe.R.attr#settingBackground}
+          attribute's value can be found in the {@link #StringView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>first</code></td><td>0</td><td></td></tr>
+<tr><td><code>middle</code></td><td>1</td><td></td></tr>
+<tr><td><code>last</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name android:settingBackground
+        */
+        public static final int StringView_settingBackground = 1;
+        /**
+          <p>This symbol is the offset where the {@link cn.wuyun.safe.R.attr#title}
+          attribute's value can be found in the {@link #StringView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:title
+        */
+        public static final int StringView_title = 0;
+    };
 }
