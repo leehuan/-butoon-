@@ -2,13 +2,13 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -29,4 +29,145 @@
         <item name="android:paddingTop">10dp</item>
         <item name="android:paddingBottom">10dp</item>
     </style>
+
+    <!--
+         <TextView 
+	    style="@style/activityTitleBar"
+	 	android:gravity="center_vertical"
+	    android:text="1.欢迎使用手机防盗"
+	    />
+    -->
+
+    <style name="setupTitle" parent="activityTitleBar">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!--
+          android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="您的手机防盗卫士:"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginTop="10dp"
+	    android:textSize="20sp"
+    -->
+    <style name="setupContext">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!--
+		 android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="25dp"
+	    android:text="SIM卡变更警报"
+	    android:drawablePadding="10dp"
+	    android:textSize="15sp"
+	    android:drawableLeft="@drawable/dialog_title_default_icon"
+    -->
+    <style name="setupContext1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:drawableLeft">@drawable/dialog_title_default_icon</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+    <!--
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/presence_online" />
+    -->
+    <style name="setupOnlineStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@android:drawable/presence_online</item>
+    </style>
+
+    <!--
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/presence_invisible"
+    -->
+    <style name="setupInvisibleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@android:drawable/presence_invisible</item>
+    </style>
+    <!--
+         android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+    -->
+
+    <style name="setupImg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <!--
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+    -->
+
+    <style name="setupLineoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!--
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一步"
+            android:textSize="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/selector_affirm_btn_bg"
+            android:drawableRight="@drawable/next"
+            android:drawablePadding="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+    -->
+    <style name="preStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/selector_affirm_btn_bg</item>
+        <item name="android:drawableLeft">@drawable/pre</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:onClick">pre</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="nextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/selector_affirm_btn_bg</item>
+        <item name="android:drawableRight">@drawable/next</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:onClick">next</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>
