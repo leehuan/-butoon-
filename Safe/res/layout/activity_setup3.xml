@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/setupTitle"
+        android:paddingLeft="5dp"
+        android:text="3.设置安全号码" />
+
+    <TextView
+        style="@style/setupContext"
+        android:text="SIM卡如果发生变化:" />
+
+    <TextView
+        style="@style/setupContext"
+        android:layout_marginTop="1dp"
+        android:text="报警短信就会发送给安全号码" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="请输入安全号码"
+         >
+    </EditText>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="@drawable/selector_affirm_btn_bg" >
+
+        <TextView
+            android:id="@+id/tv_setup3_selectsafenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+       		android:layout_centerInParent="true"
+            android:text="选择安全号码"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            style="@style/setupImg"
+            android:src="@drawable/step_3" />
+
+        <LinearLayout style="@style/setupLineoutStyle" >
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+            <ImageView style="@style/setupOnlineStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+        </LinearLayout>
+
+        <Button
+            style="@style/preStyle"
+            android:text="上一步" />
+
+        <Button
+            style="@style/nextStyle"
+            android:text="下一步" />
+    </RelativeLayout>
+
+</LinearLayout>

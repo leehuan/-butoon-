@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/setupTitle"
+        android:paddingLeft="5dp"
+        android:text="5.恭喜您，设置完成" />
+
+   
+    
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            style="@style/setupImg"
+            android:src="@drawable/step_5" />
+
+        <LinearLayout style="@style/setupLineoutStyle" >
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+            <ImageView style="@style/setupOnlineStyle" />
+        </LinearLayout>
+
+        <Button
+            style="@style/preStyle"
+            android:textColor="@android:color/white"
+            android:text="上一步" />
+
+        <Button
+            style="@style/nextStyle"
+            android:text="完成设置" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="选中开启防盗保护" />
+
+    </RelativeLayout>
+
+</LinearLayout>

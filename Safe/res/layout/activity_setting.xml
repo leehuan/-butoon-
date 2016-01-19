@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cnwuyun="http://schemas.android.com/apk/res/cn.wuyun.safe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/activityTitleBar"
+        android:layout_height="wrap_content"
+        android:text="设置中心" />
+
+    <cn.wuyun.safe.view.SettingView
+        android:id="@+id/sv_setting_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        cnwuyun:istoggle="true"
+        cnwuyun:settingBackground="first"
+        cnwuyun:title="设置自动更新" />
+
+    <cn.wuyun.safe.view.SettingView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        cnwuyun:istoggle="true"
+        cnwuyun:settingBackground="last"
+        cnwuyun:title="骚扰拦截设置" />
+
+    <cn.wuyun.safe.view.SettingView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        cnwuyun:istoggle="true"
+        cnwuyun:settingBackground="first"
+        cnwuyun:title="归属地显示设置" />
+
+    <cn.wuyun.safe.view.SettingView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cnwuyun:istoggle="true"
+        cnwuyun:settingBackground="last"
+        cnwuyun:title="归属地风格设置" />
+
+</LinearLayout>

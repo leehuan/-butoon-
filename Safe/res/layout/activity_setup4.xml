@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/setupTitle"
+        android:paddingLeft="5dp"
+        android:text="4.激活设备管理员" />
+
+    <TextView
+        style="@style/setupContext"
+        android:text="激活系统管理员:" />
+
+    <TextView
+        style="@style/setupContext"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:text="可远程锁屏，远程擦除数据" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:background="@drawable/selector_affirm_btn_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="点击绑定/解绑SIM卡"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/unlock" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            style="@style/setupImg"
+            android:src="@drawable/step_4" />
+
+        <LinearLayout style="@style/setupLineoutStyle" >
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+            <ImageView style="@style/setupOnlineStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+        </LinearLayout>
+
+        <Button
+            style="@style/preStyle"
+            android:text="上一步" />
+
+        <Button
+            style="@style/nextStyle"
+            android:text="下一步" />
+    </RelativeLayout>
+
+</LinearLayout>

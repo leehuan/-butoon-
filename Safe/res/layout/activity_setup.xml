@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/setupTitle"
+        android:paddingLeft="5dp"
+        android:text="1.欢迎使用手机防盗" />
+
+    <TextView
+        style="@style/setupContext"
+        android:text="您的手机防盗卫士:" />
+
+    <TextView
+        style="@style/setupContext1"
+        android:text="SIM卡变更警报" />
+
+    <TextView
+        style="@style/setupContext1"
+        android:text="GPS追踪" />
+
+    <TextView
+        style="@style/setupContext1"
+        android:text="远程锁屏" />
+
+    <TextView
+        style="@style/setupContext1"
+        android:text="远程销毁数据" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            style="@style/setupImg"
+            android:src="@drawable/step_1" />
+
+        <LinearLayout
+            style="@style/setupLineoutStyle"
+             >
+
+            <ImageView style="@style/setupOnlineStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+
+            <ImageView style="@style/setupInvisibleStyle" />
+        </LinearLayout>
+
+        <Button
+            style="@style/nextStyle"
+            android:text="下一步" 
+            />
+    </RelativeLayout>
+
+</LinearLayout>
