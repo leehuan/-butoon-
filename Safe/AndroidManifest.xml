@@ -10,6 +10,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -26,18 +29,28 @@
         </activity>
         <activity android:name=".MainActivity" >
         </activity>
-        <activity android:name=".SettingActivity" >
+        <activity android:name="cn.wuyun.safe.SettingActivity" >
         </activity>
-        <activity android:name=".LastFindSetup1Activity" >
+        <activity android:name=".LostFindSetup1Activity" >
         </activity>
-        <activity android:name=".LastFindSetup2Activity" >
+        <activity android:name=".LostFindSetup2Activity" >
         </activity>
-        <activity android:name=".LastFindSetup3Activity" >
+        <activity android:name=".LostFindSetup3Activity" >
         </activity>
-        <activity android:name=".LastFindSetup4Activity" >
+        <activity android:name=".LostFindSetup4Activity" >
         </activity>
-        <activity android:name=".LastFindSetup5Activity" >
+        <activity android:name=".LostFindSetup5Activity" >
         </activity>
+        <activity android:name=".LostFindActivity" >
+        </activity>
+        <activity android:name=".SelectSafeNumberActivity" >
+        </activity>
+
+        <receiver android:name="cn.wuyun.safe.receiver.StartPhoneChangSim" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
