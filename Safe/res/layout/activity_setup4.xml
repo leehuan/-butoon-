@@ -20,6 +20,7 @@
         android:text="可远程锁屏，远程擦除数据" />
 
     <RelativeLayout
+        android:id="@+id/rl_setup4_getAdm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -37,13 +38,14 @@
             android:textSize="20dp" />
 
         <ImageView
+            android:id="@+id/iv_setup4_adminimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="20dp"
-            android:src="@drawable/unlock" />
+            android:src="@drawable/admin_inactivated" />
     </RelativeLayout>
 
     <RelativeLayout

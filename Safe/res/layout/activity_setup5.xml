@@ -43,7 +43,7 @@
             android:text="完成设置" />
 
         <CheckBox
-            android:id="@+id/checkBox1"
+            android:id="@+id/ch_setup5_ischeck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"

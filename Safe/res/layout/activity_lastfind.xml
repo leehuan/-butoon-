@@ -25,6 +25,7 @@
             android:textSize="20dp" />
 
         <TextView
+            android:id="@+id/tv_lostfind_safenumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -41,21 +42,23 @@
         android:background="@android:color/black" />
 
     <RelativeLayout
+        android:id="@+id/rl_lostfind_ischeck"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:padding="10dp" >
+        android:padding="10dp"
+        android:background="@drawable/selector_cancal_bt_bg"
+         >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
             android:text="防盗保护是否开启"
             android:textSize="20dp" />
 
         <ImageView
+            android:id="@+id/iv_lastfind_ischeck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -75,7 +78,7 @@
         android:layout_alignParentLeft="true"
         android:layout_gravity="center_vertical"
         android:padding="15dp"
-        android:background="@drawable/selector_cancal_bt_bg"
+        android:background="@drawable/selector_lostfind_bt_bg"
         android:paddingBottom="5dp"
         android:text="重新进入设置向导"
         android:textSize="20dp" />

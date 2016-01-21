@@ -5,18 +5,23 @@ import java.util.List;
 import cn.wuyun.safe.bean.SelectSafeAddListInfo;
 import cn.wuyun.safe.engine.SelectSafeNumberEngine;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.ActionMode;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class SelectSafeNumberActivity extends Activity {
+public class SelectSafeNumberActivity extends Activity implements
+		OnItemClickListener {
 
+	private static final int RETURNPHONE = 10;
 	private ListView selectsafenumber;
 	private List<SelectSafeAddListInfo> allContans;
 
@@ -37,6 +42,9 @@ public class SelectSafeNumberActivity extends Activity {
 
 	private void initView() {
 		selectsafenumber = (ListView) findViewById(R.id.lv_selectsafenumber);
+
+		selectsafenumber.setOnItemClickListener(this);
+
 		selectsafenumber.setAdapter(new MyAdapter());
 
 	}
@@ -64,37 +72,56 @@ public class SelectSafeNumberActivity extends Activity {
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			// TODO Auto-generated method stub
-			
+
+			View view = new View(SelectSafeNumberActivity.this);
+			ViewHelder ViewHelder = new ViewHelder();
 			if (convertView == null) {
-
-				convertView = convertView.inflate(
-						SelectSafeNumberActivity.this,
+				view = View.inflate(SelectSafeNumberActivity.this,
 						R.layout.listview_select, null);
-			}
-			ImageView mimg = (ImageView) convertView
-					.findViewById(R.id.iv_listview_select);
-			TextView mname = (TextView) convertView
-					.findViewById(R.id.tv_listview_name);
+				ViewHelder.mimg = (ImageView) view
+						.findViewById(R.id.iv_listview_select);
+				ViewHelder.mname = (TextView) view
 
-			TextView mnumber = (TextView) convertView
-					.findViewById(R.id.tv_listview_number);
+				.findViewById(R.id.tv_listview_name);
+
+				ViewHelder.mnumber = (TextView) view
+						.findViewById(R.id.tv_listview_number);
+				view.setTag(ViewHelder);
+			} else {
+
+				view = convertView;
+				ViewHelder = (ViewHelder) view.getTag();
+			}
 
 			SelectSafeAddListInfo listInfo = allContans.get(position);
 
-			mname.setText(listInfo.name);
-			mnumber.setText(listInfo.number);
+			ViewHelder.mname.setText(listInfo.name);
+			ViewHelder.mnumber.setText(listInfo.number);
 			Bitmap bitmap = SelectSafeNumberEngine.getContansIcon(
 					getApplicationContext(), listInfo.Icon);
-			mimg.setImageBitmap(bitmap);
+			ViewHelder.mimg.setImageBitmap(bitmap);
 
-			return convertView;
+			return view;
 		}
 
 	}
 
-	class   Box {
+	class ViewHelder {
 		ImageView mimg;
 		TextView mname;
 		TextView mnumber;
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+			long arg3) {
+		// TODO Auto-generated method stub
+
+		Intent it = new Intent();
+		it.putExtra("number", allContans.get(position).number);
+		setResult(Activity.RESULT_OK, it);
+
+		finish();
+
 	}
 }

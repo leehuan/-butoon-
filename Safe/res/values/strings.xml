@@ -4,5 +4,7 @@
     <string name="app_name">Safe</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="sample_device_admin_description">德莱联盟</string>
+    <string name="sample_device_admin">德莱安全卫士</string>
 
 </resources>

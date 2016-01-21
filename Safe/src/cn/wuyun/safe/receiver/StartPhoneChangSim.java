@@ -16,7 +16,8 @@ public class StartPhoneChangSim extends BroadcastReceiver {
 		// TODO Auto-generated method stub
 		System.out.println("手机重起了");
 
-		TelephonyManager telephone = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+		TelephonyManager telephone = (TelephonyManager) context
+				.getSystemService(Context.TELEPHONY_SERVICE);
 		String simnumber = telephone.getSimSerialNumber();
 		String startSim = SharedPreferencesUtil.getString(context,
 				Contants.BINDSIM, "");
@@ -24,7 +25,10 @@ public class StartPhoneChangSim extends BroadcastReceiver {
 			if (!simnumber.equals(startSim)) {
 
 				SmsManager sms = SmsManager.getDefault();
-				sms.sendTextMessage("5556", null, "wo bei tou", null, null);
+
+				sms.sendTextMessage(SharedPreferencesUtil.getString(context,
+						Contants.SAFENUMBER, "5556"), null, "wo bei tou", null,
+						null);
 
 			}
 
