@@ -35,8 +35,25 @@ public class SelectSafeNumberActivity extends Activity implements
 	}
 
 	private void filldate() {
-		allContans = SelectSafeNumberEngine
-				.getAllContans(getApplicationContext());
+		new Thread(){
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				allContans = SelectSafeNumberEngine
+						.getAllContans(getApplicationContext());
+				super.run();
+				runOnUiThread(new Runnable() {
+					
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						selectsafenumber.setAdapter(new MyAdapter());
+						
+					}
+				});
+			}
+			
+		}.start();
 
 	}
 
@@ -45,7 +62,6 @@ public class SelectSafeNumberActivity extends Activity implements
 
 		selectsafenumber.setOnItemClickListener(this);
 
-		selectsafenumber.setAdapter(new MyAdapter());
 
 	}
 

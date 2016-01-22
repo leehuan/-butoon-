@@ -197,6 +197,7 @@ public class MainActivity extends Activity implements
 			}
 			break;
 		case 1:
+			goBlackNumber();
 
 			break;
 		case 2:
@@ -221,6 +222,12 @@ public class MainActivity extends Activity implements
 			break;
 		}
 
+	}
+
+	private void goBlackNumber() {
+		// TODO Auto-generated method stub
+		Intent it = new Intent(MainActivity.this,BlackNumberActivity.class);
+		startActivity(it);
 	}
 
 	private void onClickInputPassword() {
