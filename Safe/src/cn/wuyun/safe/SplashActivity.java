@@ -1,6 +1,9 @@
 package cn.wuyun.safe;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,6 +29,7 @@ import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
@@ -42,12 +46,55 @@ public class SplashActivity extends Activity {
 	private String json;
 	private HttpUtils http;
 	private ProgressDialog diglog;
+	private InputStream open;
+	private FileOutputStream fileOutputStream;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
 		initView();
+		copyDB();
+	}
+
+	private void copyDB() {
+		// TODO Auto-generated method stub
+		File file = new File(getFilesDir(), "address.db");
+		if (!file.exists()) {
+			AssetManager assets = getAssets();
+			try {
+				open = assets.open("address.db");
+				fileOutputStream = new FileOutputStream(file);
+				byte[] bytes =new byte[1024];
+				int len=-1;
+				if((len=open.read(bytes))!=-1){
+					
+					fileOutputStream.write(bytes, 0, len);
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally{
+				if(open!=null){
+					try {
+						open.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				if(fileOutputStream!=null){
+					try {
+						fileOutputStream.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				
+			}
+
+		}
 	}
 
 	/**
@@ -115,7 +162,7 @@ public class SplashActivity extends Activity {
 			} else {
 
 				Alertbiglog();
-//TODO  xxie zje
+				// TODO xxie zje
 			}
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block

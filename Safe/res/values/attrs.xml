@@ -9,7 +9,6 @@
             <enum name="last" value="2" />
         </attr>
         <attr name="istoggle" format="boolean"></attr>
-       
     </declare-styleable>
 
 </resources>

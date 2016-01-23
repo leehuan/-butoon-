@@ -71,12 +71,13 @@ public class SettingView extends RelativeLayout {
 	 * 获取自定义控件的内容，但不设置值
 	 */
 	private void initView() {
-		view = View.inflate(getContext(), R.layout.activity_settingview, null);
-		this.addView(view);
+		view = View.inflate(getContext(), R.layout.activity_settingview,
+				this);
+//		this.addView(view);
 		tv_setting_title = (TextView) view.findViewById(R.id.tv_setting_title);
 		im_setting_toggle = (ImageView) view
 				.findViewById(R.id.im_setting_toggle);
-
+//		this.removeView(view);
 	}
 
 	public void setToggle(boolean isToggle) {

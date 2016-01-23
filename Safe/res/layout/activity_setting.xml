@@ -21,6 +21,7 @@
         cnwuyun:title="设置自动更新" />
 
     <cn.wuyun.safe.view.SettingView
+        android:id="@+id/sv_setting_blacknumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -39,7 +40,7 @@
     <cn.wuyun.safe.view.SettingView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        cnwuyun:istoggle="true"
+        cnwuyun:istoggle="false"
         cnwuyun:settingBackground="last"
         cnwuyun:title="归属地风格设置" />
 

@@ -52,6 +52,9 @@ T
         </activity>
         <activity android:name=".AddBlackNumberActitvity" >
         </activity>
+        <activity android:name=".ToolsActivity" >
+        </activity>
+        <activity android:name=".ToolsView1Activity"></activity>
 
         <receiver android:name="cn.wuyun.safe.receiver.StartPhoneChangSim" >
             <intent-filter android:priority="1000" >
@@ -76,6 +79,11 @@ T
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
+
+        <service android:name="cn.wuyun.safe.service.GPSService" >
+        </service>
+        <service android:name="cn.wuyun.safe.service.BlackNumberService" >
+        </service>
     </application>
 
 </manifest>

@@ -28,8 +28,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements
-		 OnItemClickListener {
+public class MainActivity extends Activity implements OnItemClickListener {
 
 	private ImageView home_iv_log;
 	private ImageView home_iv_setting;
@@ -74,7 +73,7 @@ public class MainActivity extends Activity implements
 		home_gv.setAdapter(new MyAdapter());
 
 		home_iv_setting.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -87,7 +86,7 @@ public class MainActivity extends Activity implements
 
 	protected void goSetring() {
 		// TODO Auto-generated method stub
-		Intent it = new Intent(MainActivity.this,SettingActivity.class);
+		Intent it = new Intent(MainActivity.this, SettingActivity.class);
 		startActivity(it);
 	}
 
@@ -178,7 +177,6 @@ public class MainActivity extends Activity implements
 
 	}
 
-
 	/**
 	 * position根据这个值可以确定是点击的那个位置 根据id判断准确的位置
 	 */
@@ -216,7 +214,7 @@ public class MainActivity extends Activity implements
 
 			break;
 		case 7:
-
+			goCommonTools();
 			break;
 		default:
 			break;
@@ -224,9 +222,15 @@ public class MainActivity extends Activity implements
 
 	}
 
+	private void goCommonTools() {
+		// TODO Auto-generated method stub
+		Intent it = new Intent(this, ToolsActivity.class);
+		startActivity(it);
+	}
+
 	private void goBlackNumber() {
 		// TODO Auto-generated method stub
-		Intent it = new Intent(MainActivity.this,BlackNumberActivity.class);
+		Intent it = new Intent(this, BlackNumberActivity.class);
 		startActivity(it);
 	}
 
@@ -246,8 +250,8 @@ public class MainActivity extends Activity implements
 			@Override
 			public void onClick(View v) {
 
-				String inputpassword = ed_lastfind_initpassowrd.getText().toString()
-						.trim();
+				String inputpassword = ed_lastfind_initpassowrd.getText()
+						.toString().trim();
 				String password = SharedPreferencesUtil.getString(
 						getApplicationContext(), Contants.PASSWORD, "");
 				if (MD5Utils.MD5UtilsPassword(inputpassword).equals(password)) {
@@ -279,11 +283,13 @@ public class MainActivity extends Activity implements
 
 	protected void goLastFind() {
 		// TODO Auto-generated method stub
-		boolean getboolean = SharedPreferencesUtil.getboolean(this, Contants.FIRSTENTER, true);
-		if(getboolean){
-		Intent it = new Intent(MainActivity.this, LostFindSetup1Activity.class);
-		startActivity(it);
-		}else{
+		boolean getboolean = SharedPreferencesUtil.getboolean(this,
+				Contants.FIRSTENTER, true);
+		if (getboolean) {
+			Intent it = new Intent(MainActivity.this,
+					LostFindSetup1Activity.class);
+			startActivity(it);
+		} else {
 			Intent it = new Intent(MainActivity.this, LostFindActivity.class);
 			startActivity(it);
 		}
