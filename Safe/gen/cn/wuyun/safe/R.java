@@ -9,10 +9,12 @@ package cn.wuyun.safe;
 
 public final class R {
     public static final class anim {
-        public static final int setup_next_enter=0x7f040000;
-        public static final int setup_next_out=0x7f040001;
-        public static final int seup_pre_enter=0x7f040002;
-        public static final int seup_pre_out=0x7f040003;
+        public static final int cycle_7=0x7f040000;
+        public static final int setup_next_enter=0x7f040001;
+        public static final int setup_next_out=0x7f040002;
+        public static final int seup_pre_enter=0x7f040003;
+        public static final int seup_pre_out=0x7f040004;
+        public static final int shake=0x7f040005;
     }
     public static final class attr {
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -123,16 +125,18 @@ containing a value of this type.
         public static final int unlock=0x7f02003d;
     }
     public static final class id {
-        public static final int ET_setup3_safenumber=0x7f07001a;
-        public static final int action_settings=0x7f070034;
-        public static final int bt_blacknumber_cen=0x7f070028;
-        public static final int bt_blacknumber_save=0x7f070027;
-        public static final int bt_lastfind_aff=0x7f070031;
-        public static final int bt_lastfind_cen=0x7f070032;
-        public static final int ch_setup5_ischeck=0x7f07001e;
-        public static final int ed_lastfind_aginitpassowrd=0x7f070033;
-        public static final int ed_lastfind_initpassowrd=0x7f070030;
-        public static final int et_blacknumber_getnumber=0x7f070022;
+        public static final int ET_setup3_safenumber=0x7f07001b;
+        public static final int action_settings=0x7f070039;
+        public static final int bt_blacknumber_cen=0x7f07002a;
+        public static final int bt_blacknumber_save=0x7f070029;
+        public static final int bt_lastfind_aff=0x7f070036;
+        public static final int bt_lastfind_cen=0x7f070037;
+        public static final int bt_toolsview1=0x7f070033;
+        public static final int ch_setup5_ischeck=0x7f07001f;
+        public static final int ed_lastfind_aginitpassowrd=0x7f070038;
+        public static final int ed_lastfind_initpassowrd=0x7f070035;
+        public static final int et_Tools=0x7f070032;
+        public static final int et_blacknumber_getnumber=0x7f070024;
         public static final int first=0x7f070000;
         public static final int home_gv=0x7f070012;
         public static final int home_iv_log=0x7f07000e;
@@ -141,41 +145,44 @@ containing a value of this type.
         public static final int home_msg_title=0x7f070008;
         public static final int home_tv_msg=0x7f070011;
         public static final int home_tv_title=0x7f070010;
-        public static final int im_setting_toggle=0x7f070016;
-        public static final int iv_blacknumber_img_delete=0x7f07002b;
+        public static final int im_setting_toggle=0x7f070017;
+        public static final int iv_blacknumber_img_delete=0x7f07002d;
         public static final int iv_blacknumber_view_bt_icon=0x7f070003;
         public static final int iv_lastfind_ischeck=0x7f07000c;
-        public static final int iv_listview_select=0x7f07002c;
-        public static final int iv_setup2_changeimg=0x7f070019;
-        public static final int iv_setup4_adminimg=0x7f07001d;
+        public static final int iv_listview_select=0x7f07002e;
+        public static final int iv_setup2_changeimg=0x7f07001a;
+        public static final int iv_setup4_adminimg=0x7f07001e;
         public static final int last=0x7f070002;
         public static final int loading=0x7f070006;
         public static final int lv_blacknumber_img=0x7f070004;
         public static final int lv_blacknumber_list=0x7f070005;
-        public static final int lv_selectsafenumber=0x7f07002f;
+        public static final int lv_selectsafenumber=0x7f070031;
         public static final int main_iv_settings=0x7f07000f;
         public static final int middle=0x7f070001;
-        public static final int rb_blacknumber_all=0x7f070026;
-        public static final int rb_blacknumber_phone=0x7f070024;
-        public static final int rb_blacknumber_sms=0x7f070025;
-        public static final int rg_all=0x7f070023;
+        public static final int rb_blacknumber_all=0x7f070028;
+        public static final int rb_blacknumber_phone=0x7f070026;
+        public static final int rb_blacknumber_sms=0x7f070027;
+        public static final int rg_all=0x7f070025;
         public static final int rl_lostfind_ischeck=0x7f07000b;
-        public static final int rl_setup4_getAdm=0x7f07001c;
-        public static final int rl_setup_bindsim=0x7f070017;
+        public static final int rl_setup4_getAdm=0x7f07001d;
+        public static final int rl_setup_bindsim=0x7f070018;
+        public static final int setting_address=0x7f070015;
         public static final int sv_setting_blacknumber=0x7f070014;
         public static final int sv_setting_update=0x7f070013;
-        public static final int sv_tools_location=0x7f070020;
-        public static final int tv_black_mode=0x7f07002a;
-        public static final int tv_black_number=0x7f070029;
-        public static final int tv_listview_name=0x7f07002d;
-        public static final int tv_listview_number=0x7f07002e;
+        public static final int sv_tools_location=0x7f070021;
+        public static final int tv_address_view=0x7f070022;
+        public static final int tv_black_mode=0x7f07002c;
+        public static final int tv_black_number=0x7f07002b;
+        public static final int tv_listview_name=0x7f07002f;
+        public static final int tv_listview_number=0x7f070030;
         public static final int tv_lostfind_initall=0x7f07000d;
         public static final int tv_lostfind_safenumber=0x7f07000a;
-        public static final int tv_setting_title=0x7f070015;
-        public static final int tv_setup2_setbtevent=0x7f070018;
-        public static final int tv_setup3_selectsafenumber=0x7f07001b;
-        public static final int tv_splash_version=0x7f07001f;
-        public static final int tv_titlebar=0x7f070021;
+        public static final int tv_setting_title=0x7f070016;
+        public static final int tv_setup2_setbtevent=0x7f070019;
+        public static final int tv_setup3_selectsafenumber=0x7f07001c;
+        public static final int tv_splash_version=0x7f070020;
+        public static final int tv_titlebar=0x7f070023;
+        public static final int tv_tools_location=0x7f070034;
     }
     public static final class layout {
         public static final int activity_balcknumber=0x7f030000;
@@ -191,13 +198,14 @@ containing a value of this type.
         public static final int activity_setup5=0x7f03000a;
         public static final int activity_splash=0x7f03000b;
         public static final int activity_toolsview=0x7f03000c;
-        public static final int blacknumber_addblack=0x7f03000d;
-        public static final int blacknumber_item=0x7f03000e;
-        public static final int listview_select=0x7f03000f;
-        public static final int listview_selectsaenumber=0x7f030010;
-        public static final int tools_view1=0x7f030011;
-        public static final int view_inputpassowrd=0x7f030012;
-        public static final int view_lastfindview=0x7f030013;
+        public static final int address_view=0x7f03000d;
+        public static final int blacknumber_addblack=0x7f03000e;
+        public static final int blacknumber_item=0x7f03000f;
+        public static final int listview_select=0x7f030010;
+        public static final int listview_selectsaenumber=0x7f030011;
+        public static final int tools_view1=0x7f030012;
+        public static final int view_inputpassowrd=0x7f030013;
+        public static final int view_lastfindview=0x7f030014;
     }
     public static final class menu {
         public static final int splash=0x7f0c0000;

@@ -3,6 +3,7 @@ package cn.wuyun.safe;
 import cn.wuyun.safe.Utils.Contants;
 import cn.wuyun.safe.Utils.ServiceUtil;
 import cn.wuyun.safe.Utils.SharedPreferencesUtil;
+import cn.wuyun.safe.service.AddressService;
 import cn.wuyun.safe.service.BlackNumberService;
 import cn.wuyun.safe.view.SettingView;
 import android.app.Activity;
@@ -18,6 +19,7 @@ public class SettingActivity extends Activity {
 
 	private SettingView toggle;
 	private SettingView blacknumber;
+	private SettingView address;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +34,31 @@ public class SettingActivity extends Activity {
 		// 相当于创建一个settingView对象
 		toggle = (SettingView) findViewById(R.id.sv_setting_update);
 		blacknumber = (SettingView) findViewById(R.id.sv_setting_blacknumber);
+		address = (SettingView) findViewById(R.id.setting_address);
 		update();
 		blackNumber();
+		addressshow();
+	}
+
+	private void addressshow() {
+		// TODO Auto-generated method stub
+		address.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent it = new Intent(SettingActivity.this,
+						AddressService.class);
+				if (ServiceUtil.getService(getApplicationContext(),
+						"cn.wuyun.safe.service.AddressService")) {
+					startService(it);
+
+				} else {
+					stopService(it);
+				}
+				address.toToggle();
+			}
+		});
 	}
 
 	@Override
@@ -45,6 +70,13 @@ public class SettingActivity extends Activity {
 		} else {
 			blacknumber.setToggle(false);
 		}
+		if (ServiceUtil.getService(getApplicationContext(),
+				"cn.wuyun.safe.service.BlackNumberService")) {
+			blacknumber.setToggle(true);
+		} else {
+			blacknumber.setToggle(false);
+		}
+		super.onStart();
 		super.onStart();
 	}
 

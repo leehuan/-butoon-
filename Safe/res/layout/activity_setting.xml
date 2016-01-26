@@ -30,6 +30,7 @@
         cnwuyun:title="骚扰拦截设置" />
 
     <cn.wuyun.safe.view.SettingView
+        android:id="@+id/setting_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
