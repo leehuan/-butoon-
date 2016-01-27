@@ -39,6 +39,7 @@
         cnwuyun:title="归属地显示设置" />
 
     <cn.wuyun.safe.view.SettingView
+        android:id="@+id/setting_address_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         cnwuyun:istoggle="false"

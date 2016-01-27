@@ -56,4 +56,24 @@ public class SharedPreferencesUtil {
 		return shared.getString(key, dfvalue);
 	}
 
+	public static void saveInt(Context context, String key, int value) {
+
+		if (shared == null) {
+
+			shared = context.getSharedPreferences("config",
+					Context.MODE_PRIVATE);
+		}
+
+		shared.edit().putInt(key, value).commit();
+	}
+
+	public static int getInt(Context context, String key, int dfvalue) {
+		if (shared == null) {
+
+			shared = context.getSharedPreferences("config",
+					Context.MODE_PRIVATE);
+		}
+		return shared.getInt(key, dfvalue);
+	}
+
 }

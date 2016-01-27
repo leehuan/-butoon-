@@ -7,6 +7,7 @@ import cn.wuyun.safe.Utils.Contants;
 import cn.wuyun.safe.Utils.MD5Utils;
 import cn.wuyun.safe.Utils.SharedPreferencesUtil;
 import cn.wuyun.safe.bean.HomeGaryViewBean;
+import android.R.integer;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -198,7 +199,8 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			goBlackNumber();
 
 			break;
-		case 2:
+		case 2: 
+			gosoftwaremegs();
 
 			break;
 		case 3:
@@ -220,6 +222,12 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			break;
 		}
 
+	}
+
+	private void gosoftwaremegs() {
+		// TODO Auto-generated method stub
+			Intent it = new Intent(this,SoftWare.class);
+			startActivity(it);
 	}
 
 	private void goCommonTools() {

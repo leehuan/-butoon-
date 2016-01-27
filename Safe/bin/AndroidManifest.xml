@@ -56,6 +56,8 @@ T
         <activity android:name=".ToolsActivity" >
         </activity>
         <activity android:name=".ToolsView1Activity"></activity>
+        <activity android:name=".ToolsView2Activity"></activity>
+        <activity android:name=".SoftWare"></activity>
 
         <receiver android:name="cn.wuyun.safe.receiver.StartPhoneChangSim" >
             <intent-filter android:priority="1000" >
