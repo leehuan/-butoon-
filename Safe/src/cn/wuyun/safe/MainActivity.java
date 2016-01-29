@@ -199,21 +199,21 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			goBlackNumber();
 
 			break;
-		case 2: 
+		case 2:
 			gosoftwaremegs();
 
 			break;
 		case 3:
-
+			gopresssmessage();
 			break;
 		case 4:
-
+			goflowsum();
 			break;
 		case 5:
-
 			break;
 		case 6:
 
+			goCacheClean();
 			break;
 		case 7:
 			goCommonTools();
@@ -224,10 +224,32 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 	}
 
+	private void goCacheClean() {
+		// TODO Auto-generated method stub
+		startActivity(new Intent(MainActivity.this,CachaCleanActivity.class));
+	}
+
+	private void goflowsum() {
+		// TODO Auto-generated method stub
+		startActivity(new Intent(MainActivity.this, FlowSumActivity.class));
+	}
+
+	/**
+	 * 进程管理
+	 */
+	private void gopresssmessage() {
+		// TODO Auto-generated method stub
+		startActivity(new Intent(MainActivity.this,
+				ProssMaragessaActivity.class));
+	}
+
+	/**
+	 * 软件管理
+	 */
 	private void gosoftwaremegs() {
 		// TODO Auto-generated method stub
-			Intent it = new Intent(this,SoftWare.class);
-			startActivity(it);
+		Intent it = new Intent(this, SoftWareActivity.class);
+		startActivity(it);
 	}
 
 	private void goCommonTools() {

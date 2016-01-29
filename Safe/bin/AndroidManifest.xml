@@ -15,7 +15,9 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -32,7 +34,7 @@
         </activity>
         <activity android:name=".MainActivity" >
         </activity>
-T
+T
         <activity android:name="cn.wuyun.safe.SettingActivity" >
         </activity>
         <activity android:name=".LostFindSetup1Activity" >
@@ -55,9 +57,20 @@ T
         </activity>
         <activity android:name=".ToolsActivity" >
         </activity>
-        <activity android:name=".ToolsView1Activity"></activity>
-        <activity android:name=".ToolsView2Activity"></activity>
-        <activity android:name=".SoftWare"></activity>
+        <activity android:name=".ToolsView1Activity" >
+        </activity>
+        <activity android:name=".ToolsView2Activity" >
+        </activity>
+        <activity android:name=".SoftWareActivity" >
+        </activity>
+        <activity android:name=".ProssMaragessaActivity" >
+        </activity>
+        <activity android:name=".ToolsView3Activity" >
+        </activity>
+        <activity android:name=".FlowSumActivity" >
+        </activity>
+        <activity android:name=".CachaCleanActivity" >
+        </activity>
 
         <receiver android:name="cn.wuyun.safe.receiver.StartPhoneChangSim" >
             <intent-filter android:priority="1000" >
@@ -86,6 +99,8 @@ T
         <service android:name="cn.wuyun.safe.service.GPSService" >
         </service>
         <service android:name="cn.wuyun.safe.service.BlackNumberService" >
+        </service>
+        <service android:name="cn.wuyun.safe.service.ProtectedService" >
         </service>
     </application>
 

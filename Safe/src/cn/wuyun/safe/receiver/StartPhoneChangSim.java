@@ -2,6 +2,7 @@ package cn.wuyun.safe.receiver;
 
 import cn.wuyun.safe.Utils.Contants;
 import cn.wuyun.safe.Utils.SharedPreferencesUtil;
+import cn.wuyun.safe.service.ProtectedService;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -33,7 +34,7 @@ public class StartPhoneChangSim extends BroadcastReceiver {
 			}
 
 		}
-
+		context.startService(new Intent(context,ProtectedService.class));
 	}
 
 }

@@ -16,7 +16,9 @@ import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
 
 import cn.wuyun.safe.Utils.Contants;
 import cn.wuyun.safe.Utils.PageVersionUtils;
+import cn.wuyun.safe.Utils.ServiceUtil;
 import cn.wuyun.safe.Utils.SharedPreferencesUtil;
+import cn.wuyun.safe.service.ProtectedService;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -24,7 +26,9 @@ import android.os.Handler;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
+import android.app.Notification;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
@@ -55,6 +59,13 @@ public class SplashActivity extends Activity {
 		setContentView(R.layout.activity_splash);
 		initView();
 		copyDB();
+		if (!ServiceUtil.getService(getApplicationContext(),
+				"cn.wuyun.safe.service.ProtectedService")) {
+			startService(new Intent(getApplicationContext(),
+					ProtectedService.class));
+
+		}
+
 	}
 
 	private void copyDB() {
@@ -65,17 +76,17 @@ public class SplashActivity extends Activity {
 			try {
 				open = assets.open("address.db");
 				fileOutputStream = new FileOutputStream(file);
-				byte[] bytes =new byte[1024];
-				int len=-1;
-				if((len=open.read(bytes))!=-1){
-					
+				byte[] bytes = new byte[1024];
+				int len = -1;
+				if ((len = open.read(bytes)) != -1) {
+
 					fileOutputStream.write(bytes, 0, len);
 				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}finally{
-				if(open!=null){
+			} finally {
+				if (open != null) {
 					try {
 						open.close();
 					} catch (IOException e) {
@@ -83,7 +94,7 @@ public class SplashActivity extends Activity {
 						e.printStackTrace();
 					}
 				}
-				if(fileOutputStream!=null){
+				if (fileOutputStream != null) {
 					try {
 						fileOutputStream.close();
 					} catch (IOException e) {
@@ -91,7 +102,7 @@ public class SplashActivity extends Activity {
 						e.printStackTrace();
 					}
 				}
-				
+
 			}
 
 		}
@@ -101,6 +112,8 @@ public class SplashActivity extends Activity {
 	 * 初始化控件
 	 */
 	private void initView() {
+
+		
 		tv_splash_version = (TextView) findViewById(R.id.tv_splash_version);
 		tv_splash_version.setText("版本:" + PageVersionUtils.VersionCode(this));
 		new Handler().postDelayed(new Runnable() {
