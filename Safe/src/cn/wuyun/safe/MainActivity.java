@@ -210,6 +210,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			goflowsum();
 			break;
 		case 5:
+			goVirus();
 			break;
 		case 6:
 
@@ -224,9 +225,14 @@ public class MainActivity extends Activity implements OnItemClickListener {
 
 	}
 
+	private void goVirus() {
+		// TODO Auto-generated method stub
+		startActivity(new Intent(MainActivity.this, VirusActivity.class));
+	}
+
 	private void goCacheClean() {
 		// TODO Auto-generated method stub
-		startActivity(new Intent(MainActivity.this,CachaCleanActivity.class));
+		startActivity(new Intent(MainActivity.this, CachaCleanActivity.class));
 	}
 
 	private void goflowsum() {

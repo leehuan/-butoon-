@@ -18,7 +18,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.WRITE_SMS" />
-    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -35,7 +35,7 @@
         </activity>
         <activity android:name=".MainActivity" >
         </activity>
-T
+T
         <activity android:name="cn.wuyun.safe.SettingActivity" >
         </activity>
         <activity android:name=".LostFindSetup1Activity" >
@@ -71,6 +71,8 @@ T
         <activity android:name=".FlowSumActivity" >
         </activity>
         <activity android:name=".CachaCleanActivity" >
+        </activity>
+        <activity android:name=".VirusActivity" >
         </activity>
 
         <receiver android:name="cn.wuyun.safe.receiver.StartPhoneChangSim" >
