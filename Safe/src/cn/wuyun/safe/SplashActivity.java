@@ -58,7 +58,8 @@ public class SplashActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
 		initView();
-		copyDB();
+		copyDB("address.db");
+		copyDB("antivirus.db");
 		if (!ServiceUtil.getService(getApplicationContext(),
 				"cn.wuyun.safe.service.ProtectedService")) {
 			startService(new Intent(getApplicationContext(),
@@ -68,13 +69,13 @@ public class SplashActivity extends Activity {
 
 	}
 
-	private void copyDB() {
+	private void copyDB(String name) {
 		// TODO Auto-generated method stub
-		File file = new File(getFilesDir(), "address.db");
+		File file = new File(getFilesDir(), name);
 		if (!file.exists()) {
 			AssetManager assets = getAssets();
 			try {
-				open = assets.open("address.db");
+				open = assets.open(name);
 				fileOutputStream = new FileOutputStream(file);
 				byte[] bytes = new byte[1024];
 				int len = -1;
@@ -113,7 +114,6 @@ public class SplashActivity extends Activity {
 	 */
 	private void initView() {
 
-		
 		tv_splash_version = (TextView) findViewById(R.id.tv_splash_version);
 		tv_splash_version.setText("版本:" + PageVersionUtils.VersionCode(this));
 		new Handler().postDelayed(new Runnable() {
