@@ -1,0 +1,77 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--
+       android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置中心"
+        android:gravity="center"
+        android:background="#429ED6"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+     -->
+    <style name="ActivityTitle">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#429ED6</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10sp</item>
+    </style>
+    <!--
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#429ED6"
+        android:padding="5dp"
+        android:text="1.欢迎使用手机防盗"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />-->
+    <style name="SetUpTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">#429ED6</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+    <!--   android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="您的手机防盗卫士:"
+        android:textSize="30sp"-->
+    <style name="SetUpMessage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">20sp</item>
+
+    </style>
+    <!--  android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:drawableLeft="@drawable/dialog_title_default_icon"
+        android:drawablePadding="5dp"
+        android:text="SIM变更报警"
+        android:textSize="20sp"-->
+    <style name="SetUpPrivate">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:drawableLeft">@drawable/dialog_title_default_icon</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>

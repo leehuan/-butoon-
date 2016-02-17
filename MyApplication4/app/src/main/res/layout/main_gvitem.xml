@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_mian_grview_item"
+    android:padding="10dp"
+
+
+    >
+
+    <ImageView
+        android:id="@+id/mian_iv_gv_item_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/lltj" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@+id/mian_iv_gv_item_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/main_tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="流量统计"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/main_tv_item_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="事实监控流量"
+            android:textColor="#99000000"
+            android:textSize="10sp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingUi">
+        <attr name="titletext" format="string"></attr>
+        <attr name="img">
+            <enum name="img_first" value="0"></enum>
+            <enum name="img_mid" value="1"></enum>
+            <enum name="img_last" value="2"></enum>
+        </attr>
+        <attr name="istooles" format="boolean" />
+    </declare-styleable>
+
+</resources>
