@@ -73,6 +73,7 @@ public class Splashctivity extends Activity {
         Intent it = new Intent(this, MainActivity.class);
         startActivity(it);
         finish();
+
     }
 
     /**
