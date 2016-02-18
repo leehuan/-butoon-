@@ -68,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
             ImageView imageView = imageViews[position];
             //ViewGroup 将获取的每一个图片添加到ViewGroup中
             container.addView(imageView);
+            container.addView(imageView);
+            container.addView(imageView);
+            container.addView(imageView);
+            container.addView(imageView); container.addView(imageView);
+            container.addView(imageView);
+
 
 
             return imageView;
