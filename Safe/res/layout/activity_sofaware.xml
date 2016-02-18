@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/activityTitleBar"
+        android:layout_height="wrap_content"
+        android:text="软件管理" />
+
+    <cn.wuyun.safe.view.CustomProgressbar
+        android:id="@+id/appsoftware_pro_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </cn.wuyun.safe.view.CustomProgressbar>
+
+    <cn.wuyun.safe.view.CustomProgressbar
+        android:id="@+id/appsoftware_pro_sdcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </cn.wuyun.safe.view.CustomProgressbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/tv_appmanger_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D6D3CE"
+            android:padding="8dp"
+            android:text="用户程序(xxx个)"
+            android:textColor="@android:color/black"
+            android:textSize="5sp" />
+    </FrameLayout>
+
+</LinearLayout>

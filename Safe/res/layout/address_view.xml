@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:background="#FFFF00"
+    android:padding="10dp"
+    >
+
+  <TextView 
+      android:id="@+id/tv_address_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="哈哈哈"
+      android:textSize="20sp"
+      android:drawableLeft="@drawable/ic_launcher"
+      android:gravity="center"
+      />
+    
+</RelativeLayout>

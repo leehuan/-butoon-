@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="lostfind_color_press_select">#9cffce</color>
+    <color name="lostfind_color_nopress_select">#ffffff</color>
+
+</resources>

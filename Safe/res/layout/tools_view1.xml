@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_titlebar"
+        style="@style/activityTitleBar"
+        android:layout_height="wrap_content"
+        android:text="号码归属地查询" />
+
+    <EditText
+        android:id="@+id/et_Tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_state_focus"
+        android:hint="请输入要查询的号码"
+        android:padding="10dp" >
+    </EditText>
+
+    <Button
+        android:id="@+id/bt_toolsview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/selector_affirm_btn_bg"
+        android:text="查询" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="归属地:"
+            android:textColor="#99000000"
+            android:textSize="20sp" />
+         <TextView
+            android:id="@+id/tv_tools_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#99000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

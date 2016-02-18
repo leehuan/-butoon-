@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cnwuyun="http://schemas.android.com/apk/res/cn.wuyun.safe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/activityTitleBar"
+        android:layout_height="wrap_content"
+        android:text="常用工具" />
+
+    <cn.wuyun.safe.view.SettingView
+        android:id="@+id/sv_tools_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        cnwuyun:istoggle="false"
+        cnwuyun:settingBackground="first"
+        cnwuyun:title="号码归属地查询" />
+
+    <cn.wuyun.safe.view.SettingView
+        android:id="@+id/sv_tools_setting_commonnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        cnwuyun:istoggle="false"
+        cnwuyun:settingBackground="last"
+        cnwuyun:title="常用号码查询" />
+
+    <cn.wuyun.safe.view.SettingView
+        android:id="@+id/tools_sms_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        cnwuyun:istoggle="false"
+        cnwuyun:settingBackground="first"
+        cnwuyun:title="短信备份" />
+
+    <cn.wuyun.safe.view.SettingView
+        android:id="@+id/tools_getsms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cnwuyun:istoggle="false"
+        cnwuyun:settingBackground="last"
+        cnwuyun:title="短信还原" />
+
+     <cn.wuyun.safe.view.SettingView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        cnwuyun:istoggle="false"
+        cnwuyun:settingBackground="first"
+        cnwuyun:title="程序锁管理" />
+
+    <cn.wuyun.safe.view.SettingView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cnwuyun:istoggle="true"
+        cnwuyun:settingBackground="middle"
+        cnwuyun:title="开启电子狗服务1" />
+     <cn.wuyun.safe.view.SettingView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cnwuyun:istoggle="true"
+        cnwuyun:settingBackground="last"
+        cnwuyun:title="开启电子狗服务2" />
+</LinearLayout>
